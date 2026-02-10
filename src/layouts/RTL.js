@@ -25,10 +25,8 @@ export default function RTL(props) {
   const [image, setImage] = React.useState(require("assets/img/sidebar-2.jpg"));
   const [color, setColor] = React.useState("blue");
   const [bgColor, setBgColor] = React.useState("black");
-  // const [hasImage, setHasImage] = React.useState(true);
   const [fixedClasses, setFixedClasses] = React.useState("dropdown");
   const [logo, setLogo] = React.useState(require("assets/img/logo-white.svg"));
-  // styles
   const classes = useStyles();
   const mainPanelClasses =
     classes.mainPanel +
@@ -36,9 +34,7 @@ export default function RTL(props) {
     cx({
       [classes.mainPanelSidebarMini]: miniActive
     });
-  // ref for main panel div
   const mainPanel = React.createRef();//for
-  // effect instead of componentDidMount, componentDidUpdate and componentWillUnmount
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(mainPanel.current, {
