@@ -5,11 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
-
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
-// core components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
@@ -20,12 +16,10 @@ import routes from "routes.js";
 import styles from "assets/jss/material-dashboard-pro-react/layouts/rtlStyle.js";
 
 var ps;
-
 const useStyles = makeStyles(styles);
 
 export default function RTL(props) {
   const { ...rest } = props;
-  // states and functions
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [miniActive, setMiniActive] = React.useState(false);
   const [image, setImage] = React.useState(require("assets/img/sidebar-2.jpg"));
@@ -43,7 +37,7 @@ export default function RTL(props) {
       [classes.mainPanelSidebarMini]: miniActive
     });
   // ref for main panel div
-  const mainPanel = React.createRef();
+  const mainPanel = React.createRef();//for
   // effect instead of componentDidMount, componentDidUpdate and componentWillUnmount
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {

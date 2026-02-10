@@ -22,13 +22,10 @@ const useStyles = makeStyles(styles);
 
 export default function Pages(props) {
   const { ...rest } = props;
-  // ref for the wrapper div
   const wrapper = React.createRef();
-  // styles
   const classes = useStyles();
   React.useEffect(() => {
     document.body.style.overflow = "unset";
-    // Specify how to clean up after this effect:
     return function cleanup() {};
   });
   const getRoutes = routes => {
